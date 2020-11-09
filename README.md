@@ -25,5 +25,20 @@
 * 白金會員中心頁(HTML+PHP)
 * 管理中心頁(HTML+PHP)
 * 編輯會員資料頁(HTML+PHP)    
-
+git push master master
 ### 資料庫規劃
+##### 登入功能
+- login
+    * id(id)
+    * 帳號(acc)
+    * 密碼(pw)
+    * email(email)
+    * 註冊時間(create_time)
+##### 會員功能
+-member
+    * 姓名(name)
+    * 出生年月日(birthday)
+    * 角色(含管理員)(role)
+    * 居住地(addr)
+    * 學歷(education)
+
