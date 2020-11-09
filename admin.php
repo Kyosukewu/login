@@ -39,7 +39,7 @@ include_once('header.php');
         echo "<td>{$user['email']}</td>";
         echo "<td>{$user['addr']}</td>";
         echo "<td>{$user['create_time']}</td>";
-        echo "<td><a href='edit_user.php?id={$user['id']}><button class='btn btn-primary'>編輯</button></a></td>";
+        echo "<td><a href='edit_user.php?id={$user['id']}'><button class='btn btn-primary'>編輯</button></a></td>";
         echo "</tr>";
     }
   ?>
