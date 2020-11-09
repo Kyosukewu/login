@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2020-11-09 02:26:20
+-- 產生時間： 2020-11-09 02:26:12
 -- 伺服器版本： 10.4.14-MariaDB
 -- PHP 版本： 7.4.10
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `login` (
-  `id` int(11) UNSIGNED NOT NULL COMMENT 'id',
+  `id` int(11) UNSIGNED NOT NULL,
   `acc` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
   `pw` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -47,8 +47,8 @@ CREATE TABLE `member` (
   `birthday` date NOT NULL,
   `role` varchar(8) COLLATE utf8mb4_unicode_ci NOT NULL,
   `addr` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `education` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `loginid` int(10) UNSIGNED NOT NULL
+  `education` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `login_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -75,7 +75,7 @@ ALTER TABLE `member`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'id';
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `member`
