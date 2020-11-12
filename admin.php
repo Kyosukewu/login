@@ -9,8 +9,9 @@ include_once('header.php');
     <div class="col-8 mx-auto d-flex justify-content-between">
     <span>
     <?php
-    if(isset($_COOKIE['login'])){
-      echo "歡迎GOD of ".$_COOKIE['login']."大大";
+    session_start();
+    if(isset($_SESSION['login'])){
+      echo "歡迎GOD of ".$_SESSION['login']."大大";
     }
     ?>
     </span>

@@ -7,12 +7,12 @@ include_once('header.php');
   <span>
     <a class="btn btn-light" href="logout.php">登出</a>
   </span>
-
   </h1>
   
   尊爵的<?php
-      if (isset($_COOKIE['login'])) {
-        echo $_COOKIE['login'];
+  session_start();
+      if (isset($_SESSION['login'])) {
+        echo $_SESSION['login'];
       } ?>你好，歡迎你
 </body>
 
