@@ -6,12 +6,23 @@ include_once('header.php');
 
 <body>
     <h1 class="text-center">管理中心</h1>
-
+    <div class="col-8 mx-auto d-flex justify-content-between">
+    <span>
     <?php
+    if(isset($_COOKIE['login'])){
+      echo "歡迎GOD of ".$_COOKIE['login']."大大";
+    }
+    ?>
+    </span>
+    <span>
+    <a class="btn btn-light" href="logout.php">登出</a>
+    </span>
+    </div>
+    <?php
+    
+
     $dsn="mysql:host=localhost;dbname=member;charset=utf8";
     $pdo=new PDO($dsn,'root','');
-
-
 
     $sql="select `login`.`id`,`acc`,`name`,`role`,`birthday`,`email`,`addr`,`create_time` from `login`,`member` where `login`.`id`=`member`.`login_id` ";
     $users=$pdo->query($sql)->fetchALL();

@@ -9,12 +9,12 @@ include_once("header.php");
     <h2>註冊帳號</h2>
     <form action="add_user.php" method="post" class="col-md-6">
         <div class="list-group">
-            <li class="list-group-item">帳號:<input type="text" name='acc'></li>
-            <li class="list-group-item">密碼:<input type="password" name='pw'></li>
-            <li class="list-group-item">姓名:<input type="text" name='name'></li>
-            <li class="list-group-item">生日:<input type="date" name='birthday'></li>
-            <li class="list-group-item">地址:<input type="text" name='addr'></li>
-            <li class="list-group-item">email:<input type="text" name='email'></li>
+            <li class="list-group-item">帳號:<input type="text" name='acc'  required></li>
+            <li class="list-group-item">密碼:<input type="password" name='pw'  required></li>
+            <li class="list-group-item">姓名:<input type="text" name='name'  required></li>
+            <li class="list-group-item">生日:<input type="date" name='birthday'  required></li>
+            <li class="list-group-item">地址:<input type="text" name='addr'  required></li>
+            <li class="list-group-item">email:<input type="text" name='email'  required></li>
             <li class="list-group-item">學歷:
                 <select name="education" id="">
                     <option value="國中">國中</option>
